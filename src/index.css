@@ -45,6 +45,11 @@ h1 {
   color: rgba(0, 0, 0, 1);
 }
 
+h2 {
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
 section {
-  padding: 1.625rem 1.875rem;
+  padding: 1.625rem 2.25rem 2.625rem 2.25rem;
 }
