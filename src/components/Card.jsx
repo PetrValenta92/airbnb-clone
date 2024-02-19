@@ -1,13 +1,12 @@
-import katiePhoto from "../images/katie-zaferes.png";
 import star from "../images/star.png";
 
-export default function Card() {
+export default function Card(props) {
     return (
         <div className="card">
             <img 
                 className="card__main-img" 
-                src={ katiePhoto } 
-                alt="Female swimmer Katie Zaferes photo" 
+                src={ props.img } 
+                alt="Female swimmer Katie Zaferes' photo" 
             />
             <div className="card__info">
                 <div className="info__rating">
@@ -15,12 +14,12 @@ export default function Card() {
                         src= { star } 
                         alt="Star icon" 
                     />
-                    <p className="rating__num">5.0</p>
-                    <p className="rating__visitors">(6) •</p>
-                    <p className="rating__country">USA</p>
+                    <p className="rating__num">{props.rating}</p>
+                    <p className="rating__visitors">({props.reviewCount}) •</p>
+                    <p className="rating__country">{props.country}</p>
                 </div>
-                <h2>Life lesson with Katie Zaferes</h2>
-                <p className="info__price"><strong>From 136$</strong> / person</p>
+                <h2>{props.title}</h2>
+                <p className="info__price"><strong>From {props.price}$</strong> / person</p>
             </div>
         </div>
     )
