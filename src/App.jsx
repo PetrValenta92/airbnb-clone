@@ -1,23 +1,29 @@
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Card from './components/Card';
-import katiePhoto from "./images/katie-zaferes.png";
+import data from "./data";
 import './App.css';
 
 function App() {
+
+  const cardElements = data.map( card => {
+    return (
+      <Card 
+          coverImg = { `/airbnb-clone/src/images/${card.coverImg}` }
+          rating = { card.stats.rating }
+          reviewCount = { card.stats.reviewCount }
+          location = { card.location }
+          title = { card.title }
+          price = { card.price }
+      />
+    )  
+  })
 
   return (
     <>
       <Navbar />
       <Hero />
-      <Card 
-        img = { katiePhoto }
-        rating = {"5.0"}
-        reviewCount = {6}
-        country = {"USA"}
-        title = {"Life lesson with Katie Zaferes"}
-        price = {136}
-      />
+      { cardElements }
     </>
   )
 }
