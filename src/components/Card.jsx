@@ -5,8 +5,8 @@ export default function Card(props) {
         <div className="card">
             <img 
                 className="card__main-img" 
-                src={ props.img } 
-                alt="Female swimmer Katie Zaferes' photo" 
+                src={ props.coverImg } 
+                alt="A photo" 
             />
             <div className="card__info">
                 <div className="info__rating">
@@ -16,7 +16,7 @@ export default function Card(props) {
                     />
                     <p className="rating__num">{props.rating}</p>
                     <p className="rating__visitors">({props.reviewCount}) •</p>
-                    <p className="rating__country">{props.country}</p>
+                    <p className="rating__country">{props.location}</p>
                 </div>
                 <h2>{props.title}</h2>
                 <p className="info__price"><strong>From {props.price}$</strong> / person</p>
